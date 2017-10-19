@@ -36,5 +36,5 @@ def output(pixel):#RGB
 
 def distance(x,y): #euler formula
 	r,g,b=x
-	b1,g1,r1=y #similar to assigning value 
+	r1,g1,b1=y #similar to assigning value 
 	return np.sqrt((r-r1)**2 + (g-g1)**2 +(b-b1)**2)
