@@ -1,2 +1,3 @@
-# Terminal-Images
-Project to show images on terminal screen
+# Terminal-Pix
+A small program to render images to terminal.
+
