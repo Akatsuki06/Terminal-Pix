@@ -7,7 +7,7 @@ import scipy.misc as sm
 # img = cv2.imread('flag.jpg')
 
 file = 'flag.jpg'
-size = (40,50)
+size = (40, 100)
 img = np.array(Image.open(file))
 img = sm.imresize(img,size)
 # img=cv2.resize(img, (400, 200)) 
