@@ -3,11 +3,49 @@ import sys
 from PIL import Image
 from color import *
 import scipy.misc as sm
-
+import getopt
+import os
 # img = cv2.imread('flag.jpg')
 
-file = 'ninja.jpg'
-size = (150, 300)
+
+# size = (20, 40)
+try:
+    myopts, args = getopt.getopt(sys.argv[1:],"f:h:w:")
+except getopt.GetoptError as e:
+    print (str(e))
+    print("Usage: %s " % sys.argv[0])
+    sys.exit(2)
+file=''
+h=50
+w=50
+for o, a in myopts:
+    if o == '-f':
+        file=a
+    elif o == '-h':
+        h=a
+    elif o=='-w':
+    	w=a
+
+r, c = os.popen('stty size', 'r').read().split()
+r=int(r)
+c=int(c)
+print(r,c)
+filenotfound=' \n Please provide filename using -f <filename>!!'
+if not file:
+	print(int(c)*"*")
+	e1='Error no file argument found!'
+	sp=int((c-len(e1))/2)
+	print('*',sp*" ",e1)
+	e1="Please provide filename using -f <filename>!!"
+	sp=sp=int((c-len(e1))/2)
+	print('*',sp*" ",e1)
+	print(int(c)*"*")
+	exit(0)
+
+size=(h,w)
+print(file,size)
+exit(0)
+
 img = np.array(Image.open(file))
 img = sm.imresize(img,size)
 # img=cv2.resize(img, (400, 200)) 
