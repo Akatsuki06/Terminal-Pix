@@ -38,3 +38,6 @@ def distance(x,y): #eucledian formula
 	r,g,b=x
 	r1,g1,b1=y #similar to assigning value 
 	return np.sqrt((r-r1)**2 + (g-g1)**2 +(b-b1)**2)
+
+def rgb(bgr):
+	return [bgr[2],bgr[1],bgr[0]]
