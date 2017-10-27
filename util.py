@@ -31,10 +31,9 @@ def errorFileArgNotFound():
 	fileargnotfound=['Error no file argument found!','Please provide filename using \'-f <filename>\'.']
 	fileError(fileargnotfound)
 
-def errorFileNotFound:
+def errorFileNotFound():
 	filenotfound=['File not found!','Please provide the correct using filename with path.']
 	fileError(filenotfound)
-	
 
 def fileError(filenotfound):
 	r, c = os.popen('stty size', 'r').read().split()
