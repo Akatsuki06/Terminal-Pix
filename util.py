@@ -11,8 +11,8 @@ def getArgs():
 		print("Usage: %s " % sys.argv[0])
 		sys.exit(2)
 	file=''
-	h=50
-	w=50
+	h=20
+	w=20
 	for o, a in opts:
 		if o=='--help' :
 			help()
